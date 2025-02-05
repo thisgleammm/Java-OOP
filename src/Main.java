@@ -7,6 +7,30 @@ class Mahasiswa {
     int umur;
 }
 
+// Class dengan constructor
+class Mahasiswi {
+    String nama;
+    String NIM;
+    String jurusan;
+    double IPK;
+    int umur;
+
+    //Counstuctor dipanggil saat object pertama kali dibuat
+    // Mahasiswi(){
+    //     System.out.println("Ini adalah constructor");
+    // }
+
+    //Constructor dengan parameter
+    Mahasiswi(String inputNama, String inputNIM, String inputjurusan, double inputIPK, int inputumur){
+        nama = inputNama;
+        NIM = inputNIM;
+        jurusan = inputjurusan;
+        IPK = inputIPK;
+        umur = inputumur;
+    }
+
+}
+
 public class Main {
     public static void main(String[] args) throws Exception {
         // Membuat Object dari Class
@@ -35,5 +59,11 @@ public class Main {
         System.out.println(mahasiswa2.jurusan);
         System.out.println(mahasiswa2.IPK);
         System.out.println(mahasiswa2.umur);
+
+        //Constructor
+        Mahasiswi mahasiswi1 = new Mahasiswi("juju", "123456789", "Teknik Informatika", 3.5, 20);
+        Mahasiswi mahasiswi2 = new Mahasiswi("jeje", "987654321", "Teknik Teknikan", 3.5, 32);
+        System.out.println(mahasiswi1.nama);
+        System.out.println(mahasiswi2.nama);
     }
 }
